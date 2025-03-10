@@ -41,7 +41,7 @@ int main() {
     
     
     if(!add_repeating_timer_ms(500, timer_callback, NULL, &timer)){
-      printf("Faild/n");
+      printf("Failed to add timer/n");
     }
     
     while (true) {
