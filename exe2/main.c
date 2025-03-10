@@ -2,10 +2,6 @@
 #include "pico/stdlib.h"
 #include <stdio.h>
 
-#include "hardware/gpio.h"
-#include "pico/stdlib.h"
-#include <stdio.h>
-
 #define BTN_PIN_R 28
 #define BTN_PIN_V 26
 #define LED_PIN_R 4
