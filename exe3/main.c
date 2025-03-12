@@ -51,11 +51,10 @@ int main() {
 
     while (true) {
         if (flag_f_r) {
-
+            alarm_id_t f_alarm = add_alarm_in_ms(300, alarm_callback, NULL, false);
 
             flag_f_r =0;
             f_alarm =0;
-            alarm_id_t f_alarm = add_alarm_in_ms(300, alarm_callback, NULL, false);
         }
         if(t_fired){
             gpio_put(LED_PIN_R,1);
