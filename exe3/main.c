@@ -32,6 +32,7 @@ void btn_callback(uint gpio, uint32_t events) {
             f_alarm = 1;
     }
 }
+}
 
 int main() {
     stdio_init_all();
