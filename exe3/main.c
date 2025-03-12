@@ -11,11 +11,11 @@ volatile bool t_fired = false;
 
 int64_t alarm_callback(alarm_id_t id, void *user_data) {
     if(f_alarm){
-        timer_fired = false;
+        t_fired = false;
         return 0;
     }
     else{
-        timer_fired = true;
+        t_fired = true;
         return 0;
     }
 
@@ -23,13 +23,13 @@ int64_t alarm_callback(alarm_id_t id, void *user_data) {
 
 void btn_callback(uint gpio, uint32_t events) {
     if (events == 0x4) { // fall edge
-        if (gpio == BTN_PIN_R)
+        if (gpio == BTN_PIN_R){
             flag_f_r = 1;
-
+    }
     } else if (events == 0x8) { // rise edge
-        if (gpio == BTN_PIN_R)
+        if (gpio == BTN_PIN_R){
             flag_f_r = 0;
-            alarm = 1;
+            f_alarm = 1;
     }
 }
 

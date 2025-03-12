@@ -31,7 +31,7 @@ void btn_callback(uint gpio, uint32_t events)
             btn_r = !btn_r;
         }
         if(gpio == BTN_PIN_V){
-            btn_g = !btn_v;
+            btn_v = !btn_v;
         }
     }
 }
