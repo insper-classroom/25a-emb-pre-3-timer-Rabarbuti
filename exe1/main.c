@@ -21,10 +21,9 @@ void btn_callback(uint gpio, uint32_t events) {
 }
 
 int main() {
-    repeating_timer_t timer;
-
     
     stdio_init_all();
+    repeating_timer_t timer;
 
 
     gpio_init(LED_PIN_R);

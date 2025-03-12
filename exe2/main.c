@@ -27,10 +27,10 @@ void btn_callback(uint gpio, uint32_t events)
 {
     if (events & GPIO_IRQ_EDGE_FALL)
     {
-        if {(gpio == BTN_PIN_R)
+        if(gpio == BTN_PIN_R){
             btn_r = !btn_r;
         }
-        if {(gpio == BTN_PIN_V)
+        if(gpio == BTN_PIN_V){
             btn_g = !btn_v;
         }
     }
@@ -93,7 +93,7 @@ int main()
         {
             if (timer_ativo_v)
             {
-                gpio_put(LED_PIN_V, !gpio_get(LED_PIN_G));
+                gpio_put(LED_PIN_V, !gpio_get(LED_PIN_V));
                 timer_ativo_v = false;
             }
         }
